@@ -1,4 +1,3 @@
-
 package paradojacumplersa;
 
 import java.math.*;
@@ -9,9 +8,10 @@ public class ParadojaCumpleRsa {
     
     public static void main(String[] args) {
         
+     long inicio = System.currentTimeMillis();   
 if (args[0].equals("-AtPc"))
 {      
-    
+       
        String Modulo = args[1];
        String Aleatoreo = args[2];
        BigInteger BmoduloClave, BAleatoreo, BResultado1,BResultado2, Bmedio,Bmedio1;
@@ -133,10 +133,11 @@ if (args[0].equals("-AtPc"))
         if (args[0].equals("HELP")) {
             
         System.out.println("" +
-        "        |----------------------Algoritmo de cifrado ADFGVX    --------------------|\n" +
+        "        |----------------------Paradoja Cumpleanos RSA        --------------------|\n" +
         "        |                      Consideraciones                                    |\n" +
         "        |     1. Usar el programa genRSA para generar de manera aleatoria         |\n" +
         "        |        la llave pública menores a 24 bits.                              |\n" +
+        "                 Descargar de: http://www.criptored.upm.es/software/sw_m001d.htm  |\n" +
         "        |                       Sintaxis de Ejecución                             |\n" + 
         "        |     java ParadojaCumpleRsa.java –AtPc [NumeroAleatorioGENRSA] [Numero]  |\n" +
         "        |                                                                         |\n" +
@@ -151,14 +152,16 @@ if (args[0].equals("-AtPc"))
         "        |                                                                         |\n" +
         "        |                                                                         |\n" +
         "        |     Código fuente y archivos de prueba:                                 |\n" +
-        "        |     https://github.com/jaanvagu/EncryptionAlgorithms                    |\n" +
+        "        |     https://github.com/estebane05/AtaqueCumplea-osRSA                   |\n" +
         "        |                                                                         |\n" +
         "        |-------------------------------------------------------------------------|\n"
         +"");
             
-
+        
         }// FIN TERCER  CONDICIONAL
-       
+        long fin = System.currentTimeMillis();
+        long tiempo = fin - inicio;
+        System.out.println("Tiempo de ejecucion: " + tiempo + " milisegundos.");
     
 }
     }
